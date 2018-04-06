@@ -6,18 +6,12 @@ import org.keirobm.rpgtilestotiled.adapter.GenericImage
 import org.keirobm.rpgtilestotiled.adapter.GenericImageFactory
 import org.keirobm.rpgtilestotiled.types.Rect
 
-
-/**
- * Extracts tiles of a size TILE_WIDTHxTILE_HEIGHT
- * from a large [GenericImage]
- */
-class ExtractTilesFromLargeImage
+abstract class GenericExtractTilesFromLargeImage
 (
         val imgFactory: GenericImageFactory
 )
     : TileProcesser
 {
-
 
     private fun isInBoundsOfImage(img: GenericImage, rect: Rect): Boolean {
         if (rect.x >= img.width)
