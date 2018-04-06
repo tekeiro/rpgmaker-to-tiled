@@ -77,4 +77,10 @@ class GenericAutoTileProcesser
         return imgsResult
     }
 
+    override val width: Int
+        get() = 64
+
+    override val height: Int
+        get() = 96
+
 }

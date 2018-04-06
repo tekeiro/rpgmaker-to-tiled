@@ -10,4 +10,14 @@ interface TileProcesser {
 
     fun process(img: GenericImage): List<GenericImage>
 
+    /**
+     * Width in pixels
+     */
+    val width: Int
+
+    /**
+     * Height in pixels
+     */
+    val height: Int
+
 }
