@@ -24,7 +24,7 @@ public class RpgTilesToTiledApplication extends Application {
         mainController.passStage(primaryStage);
 
         primaryStage.setTitle("RPG Tiles To Tiled Map Editor");
-        primaryStage.setScene(new Scene(root, 300, 275));
+        primaryStage.setScene(new Scene(root, 800, 600));
         primaryStage.show();
     }
 }

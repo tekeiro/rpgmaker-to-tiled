@@ -1,5 +1,6 @@
 package org.keirobm.rpgtilestotiled.adapter
 
+import javafx.scene.image.Image
 import org.keirobm.rpgtilestotiled.types.Rect
 import java.awt.image.BufferedImage
 
@@ -71,4 +72,9 @@ interface GenericImage {
      */
     val bufferedImage: BufferedImage
 
+    /**
+     * Obtain a JavaFX Image from
+     * this Generic Image.
+     */
+    val fxImage: Image
 }

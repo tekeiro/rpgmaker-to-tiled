@@ -1,10 +1,7 @@
 package org.keirobm.rpgtilestotiled.services.autotileprocessers
 
-import org.keirobm.rpgtilestotiled.TILE_HEIGHT
-import org.keirobm.rpgtilestotiled.TILE_WIDTH
 import org.keirobm.rpgtilestotiled.adapter.GenericImage
 import org.keirobm.rpgtilestotiled.adapter.GenericImageFactory
-import org.keirobm.rpgtilestotiled.types.Rect
 
 
 /**

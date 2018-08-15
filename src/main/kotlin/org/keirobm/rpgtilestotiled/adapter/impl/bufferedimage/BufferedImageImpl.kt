@@ -1,8 +1,11 @@
 package org.keirobm.rpgtilestotiled.adapter.impl.bufferedimage
 
+import javafx.embed.swing.SwingFXUtils
+import javafx.scene.image.Image
 import org.keirobm.rpgtilestotiled.adapter.GenericImage
 import org.keirobm.rpgtilestotiled.types.Rect
 import java.awt.image.BufferedImage
+import javax.swing.SwingUtilities
 
 class BufferedImageImpl
 (
@@ -23,9 +26,11 @@ class BufferedImageImpl
     }
 
     override fun copy(): GenericImage {
-        val raster = image.copyData(null)
-        val newImage = BufferedImage(image.colorModel, raster, image.isAlphaPremultiplied, null)
-        return BufferedImageImpl(newImage)
+        val newImg = BufferedImage(image.width, image.height, image.type)
+        val graphics = newImg.createGraphics()
+        graphics.drawImage(image, 0, 0, null)
+        graphics.dispose()
+        return BufferedImageImpl(newImg)
     }
 
     override fun pasteContent(otherImg: GenericImage) {
@@ -44,4 +49,7 @@ class BufferedImageImpl
 
     override val bufferedImage: BufferedImage
         get() = image
+
+    override val fxImage: Image
+        get() = SwingFXUtils.toFXImage(image, null)
 }
