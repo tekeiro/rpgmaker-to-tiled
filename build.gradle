@@ -64,3 +64,15 @@ compileKotlin {
 compileTestKotlin {
     kotlinOptions.jvmTarget = "1.8"
 }
+
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'org.keirobm.rpgtilestotiled.RpgTilesToTiledMain'
+        )
+    }
+
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}

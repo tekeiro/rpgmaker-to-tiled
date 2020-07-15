@@ -9,11 +9,7 @@ import org.keirobm.rpgtilestotiled.controllers.MainController;
 
 import java.io.IOException;
 
-public class RpgTilesToTiledApplication extends Application {
-
-    public static void main(String[] args) {
-        launch(args);
-    }
+public class RpgTilesToTiledJavaFXApp extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
